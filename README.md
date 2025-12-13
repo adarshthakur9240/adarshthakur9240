@@ -1,6 +1,6 @@
-## Hi there 👋
+## Hi there!!! 👋
 
-### 👋 Hi there! I'm Adarsh Thakur.
+###  I'm Adarsh Thakur.
 
 **🚀 About Me:**<br><br>
 
