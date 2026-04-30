@@ -60,13 +60,11 @@
 ### ✍️ Random Dev Quote
 <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Dev Quote" />
 
-### 🌟 Featured Project
-<a href="https://github.com/adarshthakur9240/Portfolio">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=adarshthakur9240&repo=Portfolio&theme=tokyonight" alt="Portfolio Repo" />
-</a>
-<br/><br/>
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=adarshthakur9240&color=00F3FF&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" />
+  <h3>🌟 Featured Project</h3>
+  <a href="https://github.com/adarshthakur9240/Portfolio">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=adarshthakur9240&repo=Portfolio&theme=tokyonight&cache_seconds=1" alt="Portfolio Repo" />
+  </a>
 </div>
 
 ---
