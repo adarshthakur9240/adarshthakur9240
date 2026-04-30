@@ -66,6 +66,10 @@
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=adarshthakur9240&repo=Portfolio&theme=tokyonight&cache_seconds=1" alt="Portfolio Repo" />
   </a>
 </div>
+<br><br/>
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=adarshthakur9240&color=00F3FF&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" />
+</div>
 
 ---
 **Let's Connect:** &nbsp;
