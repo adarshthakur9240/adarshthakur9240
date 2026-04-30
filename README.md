@@ -64,8 +64,10 @@
 <a href="https://github.com/adarshthakur9240/Portfolio">
   <img src="https://github-readme-stats.vercel.app/api/pin/?username=adarshthakur9240&repo=Portfolio&theme=tokyonight" alt="Portfolio Repo" />
 </a>
-<br/><br/>
-[![](https://visitcount.itsvg.in/api?id=adarshthakur9240&icon=0&color=0)](https://visitcount.itsvg.in)
+<br/><<br/>
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=adarshthakur9240&color=00F3FF&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" />
+</div>
 
 ---
 **Let's Connect:** &nbsp;
