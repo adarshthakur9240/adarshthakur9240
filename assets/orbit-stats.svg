@@ -1,0 +1,67 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="coreGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#eafcff"/>
+      <stop offset="35%" stop-color="#00f3ff"/>
+      <stop offset="100%" stop-color="#00f3ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="obGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <path id="orbit1" d="M300,300 m-220,0 a220,90 0 1,0 440,0 a220,90 0 1,0 -440,0" fill="none"/>
+    <path id="orbit2" d="M300,300 m-150,0 a150,150 0 1,0 300,0 a150,150 0 1,0 -300,0" fill="none"/>
+  </defs>
+  <style>
+    .bg { fill:#050508; }
+    .ring { stroke:#1a2740; stroke-width:1; fill:none; }
+    .satellite { filter:url(#obGlow); }
+    .lbl { fill:#c9f7ff; font-family:'Courier New', monospace; font-size:14px; font-weight:700; }
+    .core-pulse { animation: corepulse 3s ease-in-out infinite; }
+    @keyframes corepulse { 0%,100%{ r:38; } 50%{ r:44; } }
+    .title { fill:#4f5b6e; font-family:'Courier New', monospace; font-size:13px; letter-spacing:3px; }
+  </style>
+
+  <rect width="600" height="600" rx="16" class="bg"/>
+  <rect x="1" y="1" width="598" height="598" rx="16" fill="none" stroke="#ff2e9f" stroke-opacity="0.22"/>
+
+  <use href="#orbit1" class="ring"/>
+  <use href="#orbit2" class="ring"/>
+
+  <circle cx="300" cy="300" r="42" fill="url(#coreGrad)" class="core-pulse"/>
+  <text x="300" y="305" text-anchor="middle" class="title" fill="#05060a" font-weight="800">CORE</text>
+
+  <g class="satellite">
+    <circle r="9" fill="#ff2e9f">
+      <animateMotion dur="7s" repeatCount="indefinite" begin="0s">
+        <mpath href="#orbit1"/>
+      </animateMotion>
+    </circle>
+  </g>
+  <g class="satellite">
+    <circle r="7" fill="#00f3ff">
+      <animateMotion dur="7s" repeatCount="indefinite" begin="-3.5s">
+        <mpath href="#orbit1"/>
+      </animateMotion>
+    </circle>
+  </g>
+  <g class="satellite">
+    <circle r="8" fill="#7c4dff">
+      <animateMotion dur="10s" repeatCount="indefinite" begin="0s">
+        <mpath href="#orbit2"/>
+      </animateMotion>
+    </circle>
+  </g>
+  <g class="satellite">
+    <circle r="6" fill="#0be08c">
+      <animateMotion dur="10s" repeatCount="indefinite" begin="-5s">
+        <mpath href="#orbit2"/>
+      </animateMotion>
+    </circle>
+  </g>
+
+  <text x="300" y="60"  text-anchor="middle" class="lbl">REPOSITORIES</text>
+  <text x="300" y="548" text-anchor="middle" class="lbl">CONTRIBUTIONS</text>
+  <text x="70"  y="300" text-anchor="middle" class="lbl">STARS</text>
+  <text x="530" y="300" text-anchor="middle" class="lbl">COMMITS</text>
+</svg>
