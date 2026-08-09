@@ -1,0 +1,68 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="netGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <path id="e1" d="M600,210 L200,90"  fill="none"/>
+    <path id="e2" d="M600,210 L1000,90" fill="none"/>
+    <path id="e3" d="M600,210 L180,320" fill="none"/>
+    <path id="e4" d="M600,210 L1020,320" fill="none"/>
+    <path id="e5" d="M600,210 L600,60"  fill="none"/>
+    <path id="e6" d="M600,210 L600,360" fill="none"/>
+    <path id="e7" d="M200,90 L600,60"   fill="none"/>
+    <path id="e8" d="M1000,90 L600,60"  fill="none"/>
+    <path id="e9" d="M180,320 L600,360" fill="none"/>
+    <path id="e10" d="M1020,320 L600,360" fill="none"/>
+  </defs>
+  <style>
+    .bg { fill:#050508; }
+    .edge { stroke:#12324a; stroke-width:1.3; }
+    .node { filter:url(#netGlow); }
+    .core { fill:#00f3ff; animation: pulse 2.4s ease-in-out infinite; }
+    .leaf { fill:#ff2e9f; animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{ opacity:0.7; } 50%{ opacity:1; } }
+    .packet { fill:#eafcff; filter:url(#netGlow); }
+    .lbl { fill:#8fa3b8; font-family:'Courier New', monospace; font-size:13px; }
+    .lbl-core { fill:#c9f7ff; font-family:'Courier New', monospace; font-size:14px; font-weight:700; }
+    .title { fill:#4f5b6e; font-family:'Courier New', monospace; font-size:13px; letter-spacing:3px; }
+  </style>
+
+  <rect width="1200" height="420" rx="14" class="bg"/>
+  <rect x="1" y="1" width="1198" height="418" rx="14" fill="none" stroke="#00f3ff" stroke-opacity="0.22"/>
+  <text x="40" y="40" class="title">DISTRIBUTED_NET :: TOPOLOGY</text>
+
+  <use href="#e1" class="edge"/><use href="#e2" class="edge"/>
+  <use href="#e3" class="edge"/><use href="#e4" class="edge"/>
+  <use href="#e5" class="edge"/><use href="#e6" class="edge"/>
+  <use href="#e7" class="edge"/><use href="#e8" class="edge"/>
+  <use href="#e9" class="edge"/><use href="#e10" class="edge"/>
+
+  <circle class="packet" r="4"><animateMotion dur="2.2s" repeatCount="indefinite"><mpath href="#e1"/></animateMotion></circle>
+  <circle class="packet" r="4"><animateMotion dur="2.4s" repeatCount="indefinite" begin="-0.6s"><mpath href="#e2"/></animateMotion></circle>
+  <circle class="packet" r="4"><animateMotion dur="2.6s" repeatCount="indefinite" begin="-1.1s"><mpath href="#e3"/></animateMotion></circle>
+  <circle class="packet" r="4"><animateMotion dur="2.1s" repeatCount="indefinite" begin="-0.3s"><mpath href="#e4"/></animateMotion></circle>
+  <circle class="packet" r="4"><animateMotion dur="1.9s" repeatCount="indefinite" begin="-0.9s"><mpath href="#e5"/></animateMotion></circle>
+  <circle class="packet" r="4"><animateMotion dur="2.3s" repeatCount="indefinite" begin="-1.4s"><mpath href="#e6"/></animateMotion></circle>
+
+  <g class="node"><circle class="core" cx="600" cy="210" r="26"/></g>
+  <text x="600" y="216" text-anchor="middle" class="lbl-core" fill="#05060a" font-weight="800">CORE</text>
+
+  <g class="node"><circle class="leaf" cx="200" cy="90" r="14" style="animation-delay:0.2s"/></g>
+  <text x="200" y="65" text-anchor="middle" class="lbl">us-east</text>
+
+  <g class="node"><circle class="leaf" cx="1000" cy="90" r="14" style="animation-delay:0.4s"/></g>
+  <text x="1000" y="65" text-anchor="middle" class="lbl">eu-west</text>
+
+  <g class="node"><circle class="leaf" cx="180" cy="320" r="14" style="animation-delay:0.6s"/></g>
+  <text x="180" y="350" text-anchor="middle" class="lbl">ap-south</text>
+
+  <g class="node"><circle class="leaf" cx="1020" cy="320" r="14" style="animation-delay:0.8s"/></g>
+  <text x="1020" y="350" text-anchor="middle" class="lbl">sa-east</text>
+
+  <g class="node"><circle class="leaf" cx="600" cy="60" r="12" style="animation-delay:1s"/></g>
+  <text x="600" y="38" text-anchor="middle" class="lbl">edge-cache</text>
+
+  <g class="node"><circle class="leaf" cx="600" cy="360" r="12" style="animation-delay:1.2s"/></g>
+  <text x="600" y="392" text-anchor="middle" class="lbl">worker-pool</text>
+</svg>
