@@ -1,0 +1,44 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050508"/>
+      <stop offset="100%" stop-color="#070c16"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .win  { fill:#0d1420; stroke:#1c2b3d; stroke-width:1; }
+    .dot  { opacity:0.9; }
+    .path { fill:#4f5b6e; font-family:'Courier New', monospace; font-size:13px; }
+    .prompt { fill:#00f3ff; font-family:'Courier New', monospace; font-size:16px; }
+    .out    { fill:#c9f7ff; font-family:'Courier New', monospace; font-size:16px; }
+    .ok     { fill:#0be08c; font-family:'Courier New', monospace; font-size:16px; }
+    .line { opacity:0; animation: appear 0.4s ease-out forwards; }
+    @keyframes appear { to { opacity:1; } }
+    .l1{animation-delay:0.2s}.l2{animation-delay:0.9s}.l3{animation-delay:1.5s}
+    .l4{animation-delay:2.1s}.l5{animation-delay:2.7s}.l6{animation-delay:3.3s}
+    .l7{animation-delay:3.9s}.l8{animation-delay:4.5s}.l9{animation-delay:5.1s}
+    .cursor { animation: blink 1s steps(1) infinite; animation-delay:5.4s; }
+    @keyframes blink { 50% { opacity:0; } }
+  </style>
+
+  <rect width="1200" height="320" rx="14" fill="url(#tbg)"/>
+  <rect x="1" y="1" width="1198" height="318" rx="14" class="win"/>
+
+  <circle class="dot" cx="34" cy="32" r="6" fill="#ff5f56"/>
+  <circle class="dot" cx="56" cy="32" r="6" fill="#ffbd2e"/>
+  <circle class="dot" cx="78" cy="32" r="6" fill="#27c93f"/>
+  <text x="600" y="37" text-anchor="middle" class="path">adarshthakur9240@github: ~/about-me</text>
+
+  <g transform="translate(40,80)">
+    <text class="prompt line l1" y="0">$ whoami</text>
+    <text class="out line l2"    y="30">&gt; Adarsh Singh — B.Tech IT, JSS Noida (Class of 2027)</text>
+    <text class="prompt line l3" y="66">$ cat current_role.txt</text>
+    <text class="out line l4"    y="96">&gt; Backend &amp; AI Intern @ Hello Live Na</text>
+    <text class="prompt line l5" y="132">$ ./stack --list</text>
+    <text class="out line l6"    y="162">&gt; Rust · Go · Python · TypeScript · WebAssembly · Distributed Systems</text>
+    <text class="prompt line l7" y="198">$ ./leetcode --profile</text>
+    <text class="ok line l8"     y="228">&gt; [KNIGHT] rating 1868 · 600+ problems solved</text>
+    <text class="prompt line l9" y="264">$</text>
+    <rect x="18" y="251" width="10" height="18" fill="#00f3ff" class="cursor line l9"/>
+  </g>
+</svg>
