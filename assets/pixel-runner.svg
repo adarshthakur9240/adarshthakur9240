@@ -1,0 +1,90 @@
+<svg width="1200" height="240" viewBox="0 0 1200 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050510"/>
+      <stop offset="100%" stop-color="#0a0f1c"/>
+    </linearGradient>
+    <filter id="pxGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .grid { stroke:#12324a; stroke-width:1; }
+    .scroll { animation: scroll 2.4s linear infinite; }
+    @keyframes scroll { from{ transform:translateX(0);} to{ transform:translateX(-60px);} }
+    .star { fill:#c9f7ff; }
+    .twinkle { animation: tw 2.6s ease-in-out infinite; }
+    @keyframes tw { 0%,100%{opacity:0.2;} 50%{opacity:0.9;} }
+
+    .runner { filter:url(#pxGlow); }
+    .bob { animation: bob 0.5s steps(2) infinite; }
+    @keyframes bob { 0%{ transform:translateY(0);} 100%{ transform:translateY(-6px);} }
+    .legL { animation: legL 0.5s steps(2) infinite; }
+    .legR { animation: legR 0.5s steps(2) infinite; }
+    @keyframes legL { 0%{ transform:translateX(0);} 100%{ transform:translateX(6px);} }
+    @keyframes legR { 0%{ transform:translateX(0);} 100%{ transform:translateX(-6px);} }
+
+    .bug { fill:#ff2e9f; filter:url(#pxGlow); }
+    .bugRun { animation: bugmove 3.2s linear infinite; }
+    @keyframes bugmove { 0%{ transform:translateX(1240px);} 100%{ transform:translateX(-60px);} }
+
+    .hud { fill:#00f3ff; font-family:'Courier New', monospace; font-size:16px; font-weight:700; letter-spacing:2px; }
+    .hud2 { fill:#4f5b6e; font-family:'Courier New', monospace; font-size:12px; letter-spacing:2px; }
+  </style>
+
+  <rect width="1200" height="240" rx="14" fill="url(#skyGrad)"/>
+  <rect x="1" y="1" width="1198" height="238" rx="14" fill="none" stroke="#00f3ff" stroke-opacity="0.25"/>
+
+  <g class="twinkle"><circle class="star" cx="80"  cy="40" r="1.6"/></g>
+  <g class="twinkle" style="animation-delay:0.5s"><circle class="star" cx="220" cy="60" r="1.6"/></g>
+  <g class="twinkle" style="animation-delay:1s"><circle class="star" cx="420" cy="35" r="1.6"/></g>
+  <g class="twinkle" style="animation-delay:1.4s"><circle class="star" cx="640" cy="55" r="1.6"/></g>
+  <g class="twinkle" style="animation-delay:0.8s"><circle class="star" cx="860" cy="42" r="1.6"/></g>
+  <g class="twinkle" style="animation-delay:1.8s"><circle class="star" cx="1040" cy="65" r="1.6"/></g>
+  <g class="twinkle" style="animation-delay:0.3s"><circle class="star" cx="1150" cy="38" r="1.6"/></g>
+
+  <text x="30" y="35" class="hud">RUN.EXE</text>
+  <text x="30" y="55" class="hud2">DEBUGGING PRODUCTION AT 2AM</text>
+  <text x="1170" y="35" text-anchor="end" class="hud">HI-SCORE 9240</text>
+
+  <g class="scroll">
+    <line class="grid" x1="0"   y1="200" x2="1260" y2="200"/>
+    <line class="grid" x1="30"  y1="200" x2="0"    y2="240"/>
+    <line class="grid" x1="90"  y1="200" x2="60"   y2="240"/>
+    <line class="grid" x1="150" y1="200" x2="120"  y2="240"/>
+    <line class="grid" x1="210" y1="200" x2="180"  y2="240"/>
+    <line class="grid" x1="270" y1="200" x2="240"  y2="240"/>
+    <line class="grid" x1="330" y1="200" x2="300"  y2="240"/>
+    <line class="grid" x1="390" y1="200" x2="360"  y2="240"/>
+    <line class="grid" x1="450" y1="200" x2="420"  y2="240"/>
+    <line class="grid" x1="510" y1="200" x2="480"  y2="240"/>
+    <line class="grid" x1="570" y1="200" x2="540"  y2="240"/>
+    <line class="grid" x1="630" y1="200" x2="600"  y2="240"/>
+    <line class="grid" x1="690" y1="200" x2="660"  y2="240"/>
+    <line class="grid" x1="750" y1="200" x2="720"  y2="240"/>
+    <line class="grid" x1="810" y1="200" x2="780"  y2="240"/>
+    <line class="grid" x1="870" y1="200" x2="840"  y2="240"/>
+    <line class="grid" x1="930" y1="200" x2="900"  y2="240"/>
+    <line class="grid" x1="990" y1="200" x2="960"  y2="240"/>
+    <line class="grid" x1="1050" y1="200" x2="1020" y2="240"/>
+    <line class="grid" x1="1110" y1="200" x2="1080" y2="240"/>
+    <line class="grid" x1="1170" y1="200" x2="1140" y2="240"/>
+    <line class="grid" x1="1230" y1="200" x2="1200" y2="240"/>
+  </g>
+
+  <g class="bugRun">
+    <rect class="bug" x="0" y="176" width="14" height="10" rx="3"/>
+    <line x1="2" y1="186" x2="-2" y2="192" stroke="#ff2e9f" stroke-width="2"/>
+    <line x1="12" y1="186" x2="16" y2="192" stroke="#ff2e9f" stroke-width="2"/>
+  </g>
+
+  <g class="runner bob" transform="translate(150,150)">
+    <rect x="0" y="0" width="26" height="26" rx="4" fill="#eef9ff"/>
+    <rect x="4" y="6" width="6" height="6" fill="#05060a"/>
+    <rect x="6" y="26" width="8" height="10" class="legL" fill="#00f3ff"/>
+    <rect x="16" y="26" width="8" height="10" class="legR" fill="#00f3ff"/>
+  </g>
+
+  <rect x="0" y="196" width="1200" height="2" fill="#00f3ff" opacity="0.35"/>
+</svg>
