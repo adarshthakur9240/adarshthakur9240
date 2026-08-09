@@ -1,0 +1,25 @@
+<svg width="1200" height="34" viewBox="0 0 1200 34" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#00f3ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00f3ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00f3ff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="dotGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#eafcff" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#00f3ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00f3ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <style>
+    .track { stroke:#16202f; stroke-width:1.4; }
+    .beam  { fill:url(#dotGlow); animation: travel 4.4s linear infinite; }
+    @keyframes travel {
+      0%   { transform: translateX(-20px); }
+      100% { transform: translateX(1220px); }
+    }
+  </style>
+  <line x1="0" y1="17" x2="1200" y2="17" class="track"/>
+  <line x1="0" y1="17" x2="1200" y2="17" stroke="url(#lineGrad)" stroke-width="1.4"/>
+  <circle class="beam" cx="0" cy="17" r="9"/>
+</svg>
