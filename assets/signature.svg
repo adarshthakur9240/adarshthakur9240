@@ -1,0 +1,49 @@
+<svg width="900" height="220" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sigGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .bg { fill:#050508; }
+    .sig { fill:none; stroke:#00f3ff; stroke-width:3; stroke-linecap:round; filter:url(#sigGlow);
+           stroke-dasharray:1400; stroke-dashoffset:1400; animation: draw 3.2s ease-out forwards; }
+    @keyframes draw { to { stroke-dashoffset:0; } }
+    .underline { stroke:#ff2e9f; stroke-width:2; stroke-dasharray:520; stroke-dashoffset:520;
+                 animation: draw2 1s ease-out forwards; animation-delay:3s; filter:url(#sigGlow); }
+    @keyframes draw2 { to { stroke-dashoffset:0; } }
+    .tip { fill:#eafcff; filter:url(#sigGlow); opacity:0;
+           animation: tipmove 3.2s ease-out forwards; }
+    @keyframes tipmove { 0%{opacity:1;} 95%{opacity:1;} 100%{opacity:0;} }
+    .sub { fill:#4f5b6e; font-family:'Courier New', monospace; font-size:14px; letter-spacing:2px;
+           opacity:0; animation: fadein 0.6s ease-out forwards; animation-delay:4.1s; }
+    @keyframes fadein { to { opacity:1; } }
+    .cursor { animation: blink 1s steps(1) infinite; animation-delay:4.1s; opacity:0; }
+    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0;} }
+  </style>
+
+  <rect width="900" height="220" rx="14" class="bg"/>
+  <rect x="1" y="1" width="898" height="218" rx="14" fill="none" stroke="#00f3ff" stroke-opacity="0.2"/>
+
+  <path class="sig" d="M 90,110
+    C 110,60 140,60 150,95 C 158,120 130,135 120,110 C 112,88 150,55 170,90
+    C 185,115 165,140 195,120
+    L 220,70
+    C 225,60 245,60 240,80 L 225,140
+    C 260,90 275,70 300,95 C 310,110 290,130 270,120
+    L 330,70 L 330,140
+    C 355,80 375,70 390,100 C 400,120 380,135 365,115
+    L 420,70 C 440,60 460,65 455,90 C 450,110 425,120 415,105
+    C 430,130 460,135 480,110
+    L 540,70 C 560,60 580,65 575,90 C 570,110 545,120 535,105
+    C 550,130 580,135 600,110
+    L 650,60 L 650,140
+    C 660,90 685,60 705,90 C 715,105 700,120 690,105
+    C 700,130 730,135 750,105"/>
+
+  <line class="underline" x1="80" y1="160" x2="770" y2="160"/>
+
+  <text x="90" y="192" class="sub">— Adarsh Singh</text>
+  <text x="770" y="192" class="sub cursor">_</text>
+</svg>
