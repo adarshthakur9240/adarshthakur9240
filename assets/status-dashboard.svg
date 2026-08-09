@@ -1,0 +1,59 @@
+<svg width="1200" height="260" viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="dGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .bg { fill:#050508; }
+    .panel { fill:#0a0f1c; stroke:#1c2b3d; stroke-width:1; }
+    .lbl { fill:#8fa3b8; font-family:'Courier New', monospace; font-size:13px; letter-spacing:1px; }
+    .val { fill:#00f3ff; font-family:'Courier New', monospace; font-size:22px; font-weight:800; filter:url(#dGlow); }
+    .track { fill:#111a29; }
+    .fill { fill:#00f3ff; filter:url(#dGlow); }
+    .fillp { fill:#ff2e9f; filter:url(#dGlow); }
+    .grow  { animation: grow 2s cubic-bezier(.2,.8,.2,1) forwards; }
+    @keyframes grow { from { width:0; } }
+    .dot { animation: blink 1.6s ease-in-out infinite; filter:url(#dGlow); }
+    @keyframes blink { 0%,100%{ opacity:1; } 50%{ opacity:0.25; } }
+    .title { fill:#4f5b6e; font-family:'Courier New', monospace; font-size:13px; letter-spacing:3px; }
+  </style>
+
+  <rect width="1200" height="260" rx="14" class="bg"/>
+  <rect x="1" y="1" width="1198" height="258" rx="14" fill="none" stroke="#00f3ff" stroke-opacity="0.22"/>
+  <text x="40" y="40" class="title">SYSTEM STATUS :: LIVE</text>
+
+  <circle class="dot" cx="1130" cy="34" r="7" fill="#0be08c"/>
+  <text x="1114" y="39" text-anchor="end" class="lbl">ONLINE</text>
+
+  <!-- Panel 1 -->
+  <g transform="translate(40,70)">
+    <rect class="panel" width="340" height="150" rx="10"/>
+    <text x="20" y="34" class="lbl">P95 LATENCY</text>
+    <text x="20" y="70" class="val">160ms</text>
+    <rect class="track" x="20" y="100" width="300" height="10" rx="5"/>
+    <rect class="fill grow" x="20" y="100" width="52" height="10" rx="5"/>
+    <text x="20" y="132" class="lbl">throughput ~600 req/s</text>
+  </g>
+
+  <!-- Panel 2 -->
+  <g transform="translate(430,70)">
+    <rect class="panel" width="340" height="150" rx="10"/>
+    <text x="20" y="34" class="lbl">ERROR RATE</text>
+    <text x="20" y="70" class="val">0.00%</text>
+    <rect class="track" x="20" y="100" width="300" height="10" rx="5"/>
+    <rect class="fillp grow" x="20" y="100" width="6" height="10" rx="5" style="animation-delay:0.3s"/>
+    <text x="20" y="132" class="lbl">isolyth :: wasm sandbox</text>
+  </g>
+
+  <!-- Panel 3 -->
+  <g transform="translate(820,70)">
+    <rect class="panel" width="340" height="150" rx="10"/>
+    <text x="20" y="34" class="lbl">LEETCODE RATING</text>
+    <text x="20" y="70" class="val">1868</text>
+    <rect class="track" x="20" y="100" width="300" height="10" rx="5"/>
+    <rect class="fill grow" x="20" y="100" width="234" height="10" rx="5" style="animation-delay:0.6s"/>
+    <text x="20" y="132" class="lbl">knight :: 600+ solved</text>
+  </g>
+</svg>
