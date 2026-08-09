@@ -1,0 +1,77 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1626"/>
+      <stop offset="100%" stop-color="#050a12"/>
+    </linearGradient>
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00f3ff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#00f3ff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="c1"><rect x="30"  y="30" width="360" height="300" rx="12"/></clipPath>
+    <clipPath id="c2"><rect x="420" y="30" width="360" height="300" rx="12"/></clipPath>
+    <clipPath id="c3"><rect x="810" y="30" width="360" height="300" rx="12"/></clipPath>
+  </defs>
+  <style>
+    .bg { fill:#050508; }
+    .card { fill:url(#cardBg); stroke:#1c3348; stroke-width:1.2; }
+    .card-glow { animation: glow 3.4s ease-in-out infinite; }
+    @keyframes glow { 0%,100%{ stroke-opacity:0.4; } 50%{ stroke-opacity:1; } }
+    .scan { animation: scanmove 4s linear infinite; }
+    @keyframes scanmove { 0%{ transform:translateY(-320px);} 100%{ transform:translateY(320px);} }
+    .flicker { animation: flick 6s infinite; }
+    @keyframes flick { 0%,93%,100%{ opacity:1;} 94%{ opacity:0.4;} 95%{ opacity:1;} 96%{ opacity:0.3;} 97%{ opacity:1;} }
+    .name { fill:#eef9ff; font-family:'Courier New', monospace; font-size:24px; font-weight:800; }
+    .tag  { fill:#00f3ff; font-family:'Courier New', monospace; font-size:13px; letter-spacing:2px; }
+    .desc { fill:#8fa3b8; font-family:'Courier New', monospace; font-size:13px; }
+    .met  { fill:#ff2e9f; font-family:'Courier New', monospace; font-size:13px; font-weight:700; }
+    .corner { stroke:#00f3ff; stroke-width:1.6; fill:none; opacity:0.8; }
+  </style>
+
+  <rect width="1200" height="360" class="bg"/>
+
+  <!-- Card 1: Auroth -->
+  <g class="flicker">
+    <rect x="30" y="30" width="360" height="300" rx="12" class="card card-glow"/>
+    <g clip-path="url(#c1)"><rect class="scan" x="30" y="0" width="360" height="60" fill="url(#scanGrad)"/></g>
+    <path class="corner" d="M40,52 L40,40 L52,40"/>
+    <path class="corner" d="M368,52 L368,40 L356,40"/>
+    <text x="55" y="90"  class="tag">AGENT · RUST · AXUM/TOKIO</text>
+    <text x="55" y="130" class="name">Auroth</text>
+    <text x="55" y="165" class="desc">Autonomous multi-agent</text>
+    <text x="55" y="185" class="desc">GitHub issue resolver.</text>
+    <text x="55" y="205" class="desc">Sandboxed exec via E2B,</text>
+    <text x="55" y="225" class="desc">multi-provider LLM failover.</text>
+    <text x="55" y="270" class="met">[OK] end-to-end → real PR opened</text>
+  </g>
+
+  <!-- Card 2: Isolyth -->
+  <g class="flicker" style="animation-delay:1.4s">
+    <rect x="420" y="30" width="360" height="300" rx="12" class="card card-glow" style="animation-delay:1.1s"/>
+    <g clip-path="url(#c2)"><rect class="scan" x="420" y="0" width="360" height="60" fill="url(#scanGrad)" style="animation-delay:-1.5s"/></g>
+    <path class="corner" d="M430,52 L430,40 L442,40"/>
+    <path class="corner" d="M758,52 L758,40 L746,40"/>
+    <text x="445" y="90"  class="tag">MCP SERVER · FASTAPI · WASM</text>
+    <text x="445" y="130" class="name">Isolyth</text>
+    <text x="445" y="165" class="desc">Production MCP tool server</text>
+    <text x="445" y="185" class="desc">with WASM-sandboxed Python</text>
+    <text x="445" y="205" class="desc">execution. Postgres + Redis +</text>
+    <text x="445" y="225" class="desc">JWT + OpenTelemetry.</text>
+    <text x="445" y="270" class="met">[OK] ~600 req/s · p95 160ms · 0% err</text>
+  </g>
+
+  <!-- Card 3: Vyzrox -->
+  <g class="flicker" style="animation-delay:2.8s">
+    <rect x="810" y="30" width="360" height="300" rx="12" class="card card-glow" style="animation-delay:2.2s"/>
+    <g clip-path="url(#c3)"><rect class="scan" x="810" y="0" width="360" height="60" fill="url(#scanGrad)" style="animation-delay:-3s"/></g>
+    <path class="corner" d="M820,52 L820,40 L832,40"/>
+    <path class="corner" d="M1148,52 L1148,40 L1136,40"/>
+    <text x="835" y="90"  class="tag">EDGE AI · RUST → WASM</text>
+    <text x="835" y="130" class="name">Vyzrox</text>
+    <text x="835" y="165" class="desc">In-browser neural core.</text>
+    <text x="835" y="185" class="desc">Zero cloud calls, runs fully</text>
+    <text x="835" y="205" class="desc">client-side at the edge.</text>
+    <text x="835" y="270" class="met">[OK] &lt;1ms latency · 45+ tok/s</text>
+  </g>
+</svg>
