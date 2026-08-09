@@ -1,0 +1,16 @@
+{
+  "ignorePatterns": [
+    { "pattern": "^mailto:" },
+    { "pattern": "^https://github-readme-stats\\.vercel\\.app" },
+    { "pattern": "^https://github-readme-streak-stats\\.herokuapp\\.com" },
+    { "pattern": "^https://leetcard\\.jacoblin\\.cool" },
+    { "pattern": "^https://quotes-github-readme\\.vercel\\.app" },
+    { "pattern": "^https://komarev\\.com" },
+    { "pattern": "^https://capsule-render\\.vercel\\.app" },
+    { "pattern": "^https://img\\.shields\\.io" }
+  ],
+  "retryOn429": true,
+  "retryCount": 3,
+  "fallbackHttpStatus": [400, 403, 429, 503],
+  "timeout": "20s"
+}
