@@ -1,0 +1,70 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bootBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050508"/>
+      <stop offset="100%" stop-color="#070c16"/>
+    </linearGradient>
+    <linearGradient id="barFill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f3ff"/>
+      <stop offset="100%" stop-color="#ff2e9f"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .path { fill:#4f5b6e; font-family:'Courier New', monospace; font-size:13px; }
+    .mod  { fill:#8fa3b8; font-family:'Courier New', monospace; font-size:15px; }
+    .pct  { fill:#00f3ff; font-family:'Courier New', monospace; font-size:15px; font-weight:700; }
+    .track { fill:#0d1622; stroke:#1c2b3d; stroke-width:1; }
+    .bar { fill:url(#barFill); }
+    .grow { animation: grow 1.6s cubic-bezier(.2,.8,.2,1) forwards; }
+    @keyframes grow { from { width:0; } }
+    .b1{animation-delay:0.1s}.b2{animation-delay:1.0s}.b3{animation-delay:1.9s}
+    .b4{animation-delay:2.8s}.b5{animation-delay:3.7s}
+
+    .fadeline { opacity:0; animation: appear 0.4s forwards; }
+    .l1{animation-delay:1.7s}.l2{animation-delay:2.6s}.l3{animation-delay:3.5s}
+    .l4{animation-delay:4.4s}.l5{animation-delay:5.3s}
+    @keyframes appear { to { opacity:1; } }
+
+    .ready { opacity:0; animation: readyflash 0.9s steps(4) forwards; animation-delay:5.6s; }
+    @keyframes readyflash { 0%{opacity:0;} 25%{opacity:1;} 50%{opacity:0.3;} 75%{opacity:1;} 100%{opacity:1;} }
+    .readytxt { fill:#0be08c; font-family:'Courier New', monospace; font-size:20px; font-weight:800; letter-spacing:3px; }
+    .cursor { animation: blink 1s steps(1) infinite; animation-delay:5.6s; }
+    @keyframes blink { 50%{opacity:0;} }
+  </style>
+
+  <rect width="1200" height="360" rx="14" fill="url(#bootBg)"/>
+  <rect x="1" y="1" width="1198" height="358" rx="14" fill="none" stroke="#00f3ff" stroke-opacity="0.25"/>
+  <text x="40" y="42" class="path">SYSTEM BOOT :: adarshthakur9240 :: v9.24</text>
+
+  <g transform="translate(40,80)">
+    <text class="mod" y="0">KERNEL_RUST</text>
+    <rect class="track" x="260" y="-16" width="700" height="20" rx="4"/>
+    <rect class="bar grow b1" x="260" y="-16" width="700" height="20" rx="4"/>
+    <text class="fadeline l1 pct" x="980" y="0">[ OK ]</text>
+
+    <text class="mod" y="55">WASM_VM :: EDGE_RUNTIME</text>
+    <rect class="track" x="260" y="39" width="700" height="20" rx="4"/>
+    <rect class="bar grow b2" x="260" y="39" width="700" height="20" rx="4"/>
+    <text class="fadeline l2 pct" x="980" y="55">[ OK ]</text>
+
+    <text class="mod" y="110">DISTRIBUTED_NET :: NODES</text>
+    <rect class="track" x="260" y="94" width="700" height="20" rx="4"/>
+    <rect class="bar grow b3" x="260" y="94" width="700" height="20" rx="4"/>
+    <text class="fadeline l3 pct" x="980" y="110">[ OK ]</text>
+
+    <text class="mod" y="165">AGENT_ORCHESTRATOR :: AUROTH</text>
+    <rect class="track" x="260" y="149" width="700" height="20" rx="4"/>
+    <rect class="bar grow b4" x="260" y="149" width="700" height="20" rx="4"/>
+    <text class="fadeline l4 pct" x="980" y="165">[ OK ]</text>
+
+    <text class="mod" y="220">SANDBOX_MCP :: ISOLYTH</text>
+    <rect class="track" x="260" y="204" width="700" height="20" rx="4"/>
+    <rect class="bar grow b5" x="260" y="204" width="700" height="20" rx="4"/>
+    <text class="fadeline l5 pct" x="980" y="220">[ OK ]</text>
+  </g>
+
+  <g class="ready">
+    <text x="600" y="320" text-anchor="middle" class="readytxt">SYSTEM READY — WELCOME</text>
+    <rect x="828" y="304" width="10" height="18" fill="#0be08c" class="cursor"/>
+  </g>
+</svg>
