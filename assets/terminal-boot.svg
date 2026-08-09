@@ -37,7 +37,7 @@
     <text class="prompt line l5" y="132">$ ./stack --list</text>
     <text class="out line l6"    y="162">&gt; Rust · Go · Python · TypeScript · WebAssembly · Distributed Systems</text>
     <text class="prompt line l7" y="198">$ ./leetcode --profile</text>
-    <text class="ok line l8"     y="228">&gt; [KNIGHT] rating 1868 · 600+ problems solved</text>
+    <text class="ok line l8"     y="228">&gt; Peak rating 1868 · 699+ problems solved</text>
     <text class="prompt line l9" y="264">$</text>
     <rect x="18" y="251" width="10" height="18" fill="#00f3ff" class="cursor line l9"/>
   </g>
