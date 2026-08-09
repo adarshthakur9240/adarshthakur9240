@@ -1,0 +1,43 @@
+<svg width="1200" height="180" viewBox="0 0 1200 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .bg { fill:#050508; }
+    .scrambled { fill:#ff2e9f; font-family:'Courier New', monospace; font-size:30px; font-weight:700; filter:url(#cGlow);
+                 animation: cycle 2.4s steps(1) infinite; }
+    @keyframes cycle {
+      0%,16%   { opacity:1; }
+      16.01%,32%  { opacity:0; }
+      32.01%   { opacity:1; }
+      48%      { opacity:0; }
+      48.01%,100% { opacity:0; }
+    }
+    .scrambled2 { fill:#ff2e9f; font-family:'Courier New', monospace; font-size:30px; font-weight:700; filter:url(#cGlow);
+                  opacity:0; animation: cycle2 2.4s steps(1) infinite; }
+    @keyframes cycle2 {
+      0%,16%   { opacity:0; }
+      16.01%,32% { opacity:1; }
+      32.01%,100% { opacity:0; }
+    }
+    .final { fill:#00f3ff; font-family:'Courier New', monospace; font-size:30px; font-weight:700; filter:url(#cGlow);
+             opacity:0; animation: reveal 0.3s steps(1) forwards; animation-delay:2.4s; }
+    @keyframes reveal { to { opacity:1; } }
+    .label { fill:#4f5b6e; font-family:'Courier New', monospace; font-size:13px; letter-spacing:3px; }
+    .bracket { fill:#00f3ff; font-family:'Courier New', monospace; font-size:30px; opacity:0;
+               animation: reveal 0.3s steps(1) forwards; animation-delay:2.4s; }
+  </style>
+
+  <rect width="1200" height="180" rx="14" class="bg"/>
+  <rect x="1" y="1" width="1198" height="178" rx="14" fill="none" stroke="#00f3ff" stroke-opacity="0.22"/>
+  <text x="40" y="40" class="label">DECRYPT.SH --target=identity</text>
+
+  <text x="40" y="110" class="scrambled">x9$fz#pL_0!qR7*wV%eK@2</text>
+  <text x="40" y="110" class="scrambled2">a#zt&amp;ch1_0f_z3r0*lAt3ncy</text>
+  <text x="40" y="110" class="final">"architect of zero latency"</text>
+
+  <text x="40" y="150" class="bracket">↳ status: verified · access: full</text>
+</svg>
