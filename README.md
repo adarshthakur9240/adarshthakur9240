@@ -156,7 +156,7 @@
 
 ### Let's Connect
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-000000?logo=linkedin&logoColor=0A66C2&style=for-the-badge)](https://linkedin.com/in/adarsh-thakur-7683612a4)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-000000?logo=linkedin&logoColor=0A66C2&style=for-the-badge)](https://linkedin.com/in/adarsh-singh-7683612a4)
 [![Instagram](https://img.shields.io/badge/Instagram-000000?logo=instagram&logoColor=E4405F&style=for-the-badge)](https://instagram.com/adarshhh__thakur)
 [![Discord](https://img.shields.io/badge/Discord-000000?logo=discord&logoColor=5865F2&style=for-the-badge)](https://discord.gg/fomohono10101)
 [![Email](https://img.shields.io/badge/Email-000000?logo=gmail&logoColor=EA4335&style=for-the-badge)](mailto:singhadadarsh9240@gmail.com)
