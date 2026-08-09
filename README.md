@@ -5,6 +5,10 @@
 </div>
 
 <div align="center">
+  <img src="assets/boot-sequence.svg" width="100%" alt="system boot sequence loading modules"/>
+</div>
+
+<div align="center">
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" alt=""/>
 </div>
 
@@ -21,6 +25,12 @@
 
 <div align="center">
   <img src="assets/terminal-boot.svg" width="100%" alt="whoami terminal boot sequence"/>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="assets/cipher-decrypt.svg" width="100%" alt="decrypting identity tagline"/>
 </div>
 
 <div align="center"><img src="assets/divider.svg" width="100%" alt=""/></div>
@@ -53,6 +63,12 @@
 
 <br/>
 
+<div align="center">
+  <img src="assets/network-graph.svg" width="100%" alt="distributed systems network topology"/>
+</div>
+
+<br/>
+
 * <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Globe%20Showing%20Europe-Africa.png" width="22" align="center"/> **High-Throughput Backends:** Scaled **PawAlert** (Node.js/Redis/PostgreSQL) to **5,000+** concurrent connections, resolving spatial queries in sub-**50ms**.
 * <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Crystal%20Ball.png" width="22" align="center"/> **SaaS Monorepos:** Architected the **Q-Ecosystem** (Next.js 14, Turborepo) — a 4-app network enforcing strict Row-Level Security with sub-**80ms** p99 latency.
 * <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Crossed%20Swords.png" width="22" align="center"/> **Algorithmic Obsession:** **Knight**, rated **1868**, **600+** problems solved on LeetCode.
@@ -79,6 +95,12 @@
 <div align="center"><img src="assets/divider.svg" width="100%" alt=""/></div>
 
 ## 📊 Telemetry & Global Impact
+
+<div align="center">
+  <img src="assets/status-dashboard.svg" width="100%" alt="live system status dashboard"/>
+</div>
+
+<br/>
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=adarshthakur9240&theme=tokyonight&hide_border=true&bg_color=05060a&title_color=00f3ff&icon_color=00f3ff&text_color=c9f7ff&include_all_commits=true&count_private=true" alt="GitHub Stats" width="48%" />
@@ -116,6 +138,16 @@
 
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=adarshthakur9240&color=00f3ff&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" />
+</div>
+
+<div align="center">
+  <img src="assets/access-granted.svg" width="100%" alt="security scan access granted"/>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="assets/threat-badge.svg" width="380" alt="threat level elite badge"/>
 </div>
 
 <div align="center"><img src="assets/divider.svg" width="100%" alt=""/></div>
