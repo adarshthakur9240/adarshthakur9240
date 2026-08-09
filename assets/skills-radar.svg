@@ -1,0 +1,63 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="radarBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0a0f1c"/>
+      <stop offset="100%" stop-color="#050508"/>
+    </radialGradient>
+    <linearGradient id="sweepGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#00f3ff" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="ndGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    .ring { stroke:#12324a; stroke-width:1; fill:none; }
+    .spoke { stroke:#12324a; stroke-width:1; }
+    .sweep { animation: spin 4.5s linear infinite; transform-origin: 300px 300px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .node { fill:#ff2e9f; filter:url(#ndGlow); animation: pulse 2.2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{ r:6; opacity:0.75;} 50%{ r:9; opacity:1;} }
+    .lbl { fill:#c9f7ff; font-family:'Courier New', monospace; font-size:15px; font-weight:700; }
+    .core { fill:#00f3ff; filter:url(#ndGlow); }
+    .title { fill:#4f5b6e; font-family:'Courier New', monospace; font-size:13px; letter-spacing:3px; }
+  </style>
+
+  <rect width="600" height="600" rx="16" fill="url(#radarBg)"/>
+  <rect x="1" y="1" width="598" height="598" rx="16" fill="none" stroke="#00f3ff" stroke-opacity="0.25"/>
+
+  <circle class="ring" cx="300" cy="300" r="90"/>
+  <circle class="ring" cx="300" cy="300" r="150"/>
+  <circle class="ring" cx="300" cy="300" r="210"/>
+  <line class="spoke" x1="90" y1="300" x2="510" y2="300"/>
+  <line class="spoke" x1="300" y1="90" x2="300" y2="510"/>
+  <line class="spoke" x1="141" y1="141" x2="459" y2="459"/>
+  <line class="spoke" x1="459" y1="141" x2="141" y2="459"/>
+
+  <g class="sweep">
+    <path d="M300,300 L300,90 A210,210 0 0,1 448,152 Z" fill="url(#sweepGrad)"/>
+  </g>
+
+  <circle class="core" cx="300" cy="300" r="7"/>
+  <text x="300" y="345" text-anchor="middle" class="title">SKILLSET</text>
+
+  <circle class="node" cx="300" cy="160" r="6" style="animation-delay:0s"/>
+  <text x="300" y="140" text-anchor="middle" class="lbl">RUST</text>
+
+  <circle class="node" cx="440" cy="220" r="6" style="animation-delay:0.3s"/>
+  <text x="475" y="215" text-anchor="start" class="lbl">GO</text>
+
+  <circle class="node" cx="430" cy="400" r="6" style="animation-delay:0.6s"/>
+  <text x="465" y="410" text-anchor="start" class="lbl">WASM</text>
+
+  <circle class="node" cx="300" cy="470" r="6" style="animation-delay:0.9s"/>
+  <text x="300" y="500" text-anchor="middle" class="lbl">TYPESCRIPT</text>
+
+  <circle class="node" cx="165" cy="390" r="6" style="animation-delay:1.2s"/>
+  <text x="130" y="400" text-anchor="end" class="lbl">PYTHON</text>
+
+  <circle class="node" cx="175" cy="205" r="6" style="animation-delay:1.5s"/>
+  <text x="140" y="195" text-anchor="end" class="lbl">DIST. SYS</text>
+</svg>
