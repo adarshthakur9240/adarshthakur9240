@@ -1,0 +1,49 @@
+<svg width="1200" height="280" viewBox="0 0 1200 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="aGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="scanBeam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00f3ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#00f3ff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="scanClip"><rect x="450" y="30" width="300" height="220" rx="12"/></clipPath>
+  </defs>
+  <style>
+    .bg { fill:#050508; }
+    .frame { fill:none; stroke:#12324a; stroke-width:1.5; }
+    .beam { animation: sweep 2.4s ease-in-out infinite; }
+    @keyframes sweep { 0%{ transform:translateY(-40px);} 50%{ transform:translateY(220px);} 100%{ transform:translateY(-40px);} }
+    .ring { fill:none; stroke:#00f3ff; stroke-width:2; filter:url(#aGlow); opacity:0.7; }
+    .spin { animation: spin 6s linear infinite; transform-origin:600px 140px; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    .lbl { fill:#8fa3b8; font-family:'Courier New', monospace; font-size:14px; letter-spacing:2px; }
+    .stamp { opacity:0; animation: stampin 0.5s steps(3) forwards; animation-delay:2.2s; }
+    @keyframes stampin { 0%{opacity:0; transform:scale(1.6) rotate(-8deg);} 60%{opacity:1;} 100%{opacity:1; transform:scale(1) rotate(-8deg);} }
+    .stamptxt { fill:#0be08c; font-family:'Courier New', monospace; font-size:34px; font-weight:800; filter:url(#aGlow); }
+    .stampbox { stroke:#0be08c; stroke-width:3; fill:none; filter:url(#aGlow); }
+  </style>
+
+  <rect width="1200" height="280" rx="14" class="bg"/>
+  <rect x="1" y="1" width="1198" height="278" rx="14" fill="none" stroke="#00f3ff" stroke-opacity="0.22"/>
+  <text x="40" y="40" class="lbl">SECURITY_CHECK :: contributor.verify()</text>
+
+  <g clip-path="url(#scanClip)">
+    <rect x="450" y="30" width="300" height="220" fill="#0a0f1c"/>
+    <rect class="beam" x="450" y="0" width="300" height="60" fill="url(#scanBeam)"/>
+  </g>
+  <rect x="450" y="30" width="300" height="220" rx="12" class="frame"/>
+
+  <g class="spin">
+    <circle class="ring" cx="600" cy="140" r="70" stroke-dasharray="8 10"/>
+  </g>
+  <circle cx="600" cy="140" r="46" fill="none" stroke="#ff2e9f" stroke-width="2" opacity="0.6"/>
+  <circle cx="600" cy="140" r="8" fill="#00f3ff" filter="url(#aGlow)"/>
+
+  <g class="stamp" transform="translate(600,140)">
+    <rect class="stampbox" x="-190" y="-40" width="380" height="80" rx="6"/>
+    <text x="0" y="10" text-anchor="middle" class="stamptxt">ACCESS GRANTED</text>
+  </g>
+</svg>
