@@ -1,0 +1,27 @@
+name: README Health Check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "README.md"
+      - "assets/**"
+  pull_request:
+    paths:
+      - "README.md"
+      - "assets/**"
+  workflow_dispatch:
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check README links & images
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: "yes"
+          use-verbose-mode: "yes"
+          config-file: ".github/mlc_config.json"
